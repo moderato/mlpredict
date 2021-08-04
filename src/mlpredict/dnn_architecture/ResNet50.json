@@ -1,0 +1,1372 @@
+{
+    "layers": {
+        "1": {
+            "name": "conv1",
+            "type": "Convolution",
+            "matsize": [
+                224,
+                224
+            ],
+            "kernelsize": [
+                7,
+                7
+            ],
+            "channels_in": 3,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                112.0,
+                112.0
+            ]
+        },
+        "2": {
+            "name": "max_pool",
+            "type": "Max_pool",
+            "pool_size": [
+                3,
+                3
+            ],
+            "strides": [
+                2,
+                2
+            ],
+            "padding": "SAME",
+            "output_size": [
+                56.0,
+                56.0
+            ],
+            "channels_out": 64
+        },
+        "3": {
+            "name": "conv2_0_1",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 64,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "4": {
+            "name": "conv2_0_2",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 64,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "5": {
+            "name": "conv2_0_3",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 64,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "6": {
+            "name": "conv2_1_1",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "7": {
+            "name": "conv2_1_2",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 64,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "8": {
+            "name": "conv2_1_3",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 64,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "9": {
+            "name": "conv2_2_1",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "10": {
+            "name": "conv2_2_2",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 64,
+            "channels_out": 64,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "11": {
+            "name": "conv2_2_3",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 64,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "12": {
+            "name": "conv3_0_1",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                56.0,
+                56.0
+            ]
+        },
+        "13": {
+            "name": "conv3_0_2",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 128,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "14": {
+            "name": "conv3_0_3",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 128,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "15": {
+            "name": "conv3_0_ds",
+            "type": "Convolution",
+            "matsize": [
+                56.0,
+                56.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "16": {
+            "name": "conv3_1_1",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "17": {
+            "name": "conv3_1_2",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 128,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "18": {
+            "name": "conv3_1_3",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 128,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "19": {
+            "name": "conv3_2_1",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "20": {
+            "name": "conv3_2_2",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 128,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "21": {
+            "name": "conv3_2_3",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 128,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "22": {
+            "name": "conv3_3_1",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "23": {
+            "name": "conv3_3_2",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 128,
+            "channels_out": 128,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "24": {
+            "name": "conv3_3_3",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 128,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "25": {
+            "name": "conv4_0_1",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                28.0,
+                28.0
+            ]
+        },
+        "26": {
+            "name": "conv4_0_2",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "27": {
+            "name": "conv4_0_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "28": {
+            "name": "conv4_0_ds",
+            "type": "Convolution",
+            "matsize": [
+                28.0,
+                28.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "29": {
+            "name": "conv4_1_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "30": {
+            "name": "conv4_1_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "31": {
+            "name": "conv4_1_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "32": {
+            "name": "conv4_2_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "33": {
+            "name": "conv4_2_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "34": {
+            "name": "conv4_2_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "35": {
+            "name": "conv4_3_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "36": {
+            "name": "conv4_3_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "37": {
+            "name": "conv4_3_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "38": {
+            "name": "conv4_4_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "39": {
+            "name": "conv4_4_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "40": {
+            "name": "conv4_4_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "41": {
+            "name": "conv4_5_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "42": {
+            "name": "conv4_5_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 256,
+            "channels_out": 256,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "43": {
+            "name": "conv4_5_3",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 256,
+            "channels_out": 1024,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "44": {
+            "name": "conv5_0_1",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                14.0,
+                14.0
+            ]
+        },
+        "45": {
+            "name": "conv5_0_2",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 512,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "46": {
+            "name": "conv5_0_3",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 2048,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "47": {
+            "name": "conv5_0_ds",
+            "type": "Convolution",
+            "matsize": [
+                14.0,
+                14.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 1024,
+            "channels_out": 2048,
+            "padding": "SAME",
+            "strides": [
+                2,
+                2
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "48": {
+            "name": "conv5_1_1",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 2048,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "49": {
+            "name": "conv5_1_2",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 512,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "50": {
+            "name": "conv5_1_3",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 2048,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "51": {
+            "name": "conv5_2_1",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 2048,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "52": {
+            "name": "conv5_2_2",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                3,
+                3
+            ],
+            "channels_in": 512,
+            "channels_out": 512,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "53": {
+            "name": "conv5_2_3",
+            "type": "Convolution",
+            "matsize": [
+                7.0,
+                7.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 512,
+            "channels_out": 2048,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                7.0,
+                7.0
+            ]
+        },
+        "54": {
+            "name": "avg_pool",
+            "type": "Max_pool",
+            "pool_size": [
+                7,
+                7
+            ],
+            "strides": [
+                1,
+                1
+            ],
+            "padding": "VALID",
+            "output_size": [
+                1.0,
+                1.0
+            ],
+            "channels_out": 2048
+        },
+        "55": {
+            "name": "fc",
+            "type": "Convolution",
+            "matsize": [
+                1.0,
+                1.0
+            ],
+            "kernelsize": [
+                1,
+                1
+            ],
+            "channels_in": 2048,
+            "channels_out": 1000,
+            "padding": "SAME",
+            "strides": [
+                1,
+                1
+            ],
+            "use_bias": 0,
+            "activation": "relu",
+            "output_size": [
+                1.0,
+                1.0
+            ]
+        }
+    },
+    "input": {
+        "dimension": 3,
+        "size": [
+            224,
+            224
+        ]
+    }
+}

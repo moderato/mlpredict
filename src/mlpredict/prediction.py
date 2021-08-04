@@ -1,7 +1,8 @@
-import json
 import tensorflow as tf
+# To avoid Blas xGEMM error with TF2
+physical_devices = tf.config.list_physical_devices('GPU') 
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
 import numpy as np
-from sklearn.externals import joblib
 
 
 def predict_walltime(model,
@@ -27,16 +28,17 @@ def predict_walltime(model,
         layer_prediction: Predicted execution time of layer_name
     """
 
-    with tf.Session() as sess:
-        tf.saved_model.loader.load(sess, ["serve"], model_file)
-        graph = tf.get_default_graph()
+    tf.compat.v1.enable_resource_variables()
+    pb_model = tf.saved_model.load(model_file)
+    tf.compat.v1.enable_resource_variables()
+    f = pb_model.signatures["serving_default"]
 
-        layer_prediction = []
-        layer_name = []
+    layer_prediction = []
+    layer_name = []
 
-        for layer in model['layers']:
-            if model['layers'][layer]['type'] == 'Convolution':
-                features = get_input_features(model['layers'][layer],
+    for layer in model['layers']:
+        if model['layers'][layer]['type'] == 'Convolution':
+            features = get_input_features(model['layers'][layer],
                                               scaler,
                                               batchsize,
                                               optimizer,
@@ -44,12 +46,9 @@ def predict_walltime(model,
                                               cores,
                                               clock)
 
-                run = sess.run(
-                    'model_prediction:0',
-                    feed_dict={'model_input:0': features,
-                               'model_istraining:0': False})
-                layer_prediction.append(run[0])
-                layer_name.append(model['layers'][layer]['name'])
+            result = f(model_input=tf.constant(features, dtype=tf.float32), model_istraining=tf.constant(False))
+            layer_prediction.append(result['model_prediction'])
+            layer_name.append(model['layers'][layer]['name'])
 
     return layer_name, layer_prediction
 
@@ -63,36 +62,13 @@ def get_input_features(
         cores,
         clock):
 
-    padding_reduction = ((dictionary['padding'].lower() == 'valid')
-                         * (dictionary['kernelsize'] - 1))
-    elements_output = ((dictionary['matsize'] - padding_reduction)
-                       / dictionary['strides'])**2
-
-    ops = (batchsize
-           * elements_output
-           * dictionary['kernelsize']**2
-           * dictionary['channels_in']
-           * dictionary['channels_out'])
-
-    memory_weights = (dictionary['kernelsize']**2
-                      * dictionary['channels_in']
-                      * dictionary['channels_out']
-                      + dictionary['use_bias'] * dictionary['channels_out'])
-
-    memory_in = (batchsize
-                 * dictionary['matsize']**2
-                 * dictionary['channels_in'])
-    memory_out = (batchsize
-                  * elements_output
-                  * dictionary['channels_out'])
-
     features = np.array([batchsize,
-                         dictionary['matsize']**2,
-                         dictionary['kernelsize']**2,
+                         np.prod(dictionary['matsize']),
+                         np.prod(dictionary['kernelsize']),
                          dictionary['channels_in'],
                          dictionary['channels_out'],
                          (1 if dictionary['padding'].lower() == 'same' else 0),
-                         dictionary['strides'],
+                         dictionary['strides'][0],
                          dictionary['use_bias'],
                          (1 if optimizer.lower() == 'sgd' else 0),
                          (1 if optimizer.lower() == 'adadelta' else 0),
