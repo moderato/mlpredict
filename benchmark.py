@@ -10,7 +10,7 @@ tf.get_logger().warning('test')
 import mlpredict
 
 
-gpu = 'V100'
+gpu = 'TITANXp'
 opt = 'SGD'
 
 
